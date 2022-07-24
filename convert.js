@@ -20,7 +20,15 @@ async function main() {
     });
     const csv = prayerTimes
       .map((p) => {
-        return `${p.Date},${p.Fajuru},${p.Sunrise},${p.Dhuhr},${p.Asr},${p.Maghrib},${p.Isha}`;
+        return [
+          p.Date,
+          p.Fajuru + island.Minutes,
+          p.Sunrise + island.Minutes,
+          p.Dhuhr + island.Minutes,
+          p.Asr + island.Minutes,
+          p.Maghrib + island.Minutes,
+          p.Isha + island.Minutes,
+        ].join(",");
       })
       .join("\n");
     fs.writeFileSync(`./out/${island.IslandId}.csv`, csv);
