@@ -1,6 +1,17 @@
 # Island Mapping
 
-Use the Island ID in `https://raw.githubusercontent.com/WovenCoast/prayertimes-db/main/out/{ISLAND_ID}.csv`
+Use the Island ID in `https://raw.githubusercontent.com/WovenCoast/prayertimes-db/main/csv/{ISLAND_ID}.csv`
+
+## File Headers
+```csv
+Day, Month, Fajr, Sunrise, Dhuhr, Asr, Sunset, Isha
+```
+
+Day and Month start at 1 for the first day of the month and January respectively.
+
+All timestamps are given in the format `hh:mm` and are in the 24-hour format.
+
+## Mapping
 
 | Island ID | Atoll | Island           |
 | --------- | ----- | ---------------- |
@@ -210,4 +221,4 @@ Use the Island ID in `https://raw.githubusercontent.com/WovenCoast/prayertimes-d
 | 204       | R.    | Dhuvaafaru       |
 | 205       | R.    | Hulhudhuffaaru   |
 
-Here's a cookie for making it all the way here 🍪
+Here's a sangu for making it all the way here 🐚
